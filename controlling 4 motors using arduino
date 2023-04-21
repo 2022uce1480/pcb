@@ -4,14 +4,14 @@
 
 //motor (A,B)
 
-int enA = 9;
+int enA = 9; // to control the speed of motor 
 int pin1 = 8;
 int pin2 = 7;
 
 //motor (C,D)
 
 
-int enB = 3;
+int enB = 3; // to control the speed of motor
 int pin3 = 5;
 int pin4 = 4;
 
@@ -22,6 +22,8 @@ void setup() {
   pinMode(pin2, OUTPUT);
   pinMode(pin3, OUTPUT);
   pinMode(pin4, OUTPUT);
+  pinMode(enA, OUTPUT);
+  pinMode(enB, OUTPUT);
 }
 void one()
 {
@@ -30,6 +32,8 @@ void one()
   digitalWrite(pin2, LOW);
   digitalWrite(pin3, HIGH);
   digitalWrite(pin4, LOW);
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
   delay(5000);
 
   
@@ -38,6 +42,8 @@ void one()
   digitalWrite(pin2, HIGH);
   digitalWrite(pin3, LOW);
   digitalWrite(pin4, HIGH);
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
   delay(5000);
 
 }
