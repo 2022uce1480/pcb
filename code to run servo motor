@@ -1,0 +1,14 @@
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+
+void setup() {
+  myservo.attach(9);  // attaches the servo on pin 9 of arduino
+}
+
+void loop() {
+  myservo.write(0);     // at 0 degrees
+  delay(1000);          // delay of 1 seconds
+  myservo.write(180);   // at 180 degrees
+  delay(1000);          // delay of 1 seconds
+}
